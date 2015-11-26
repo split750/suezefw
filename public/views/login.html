@@ -1,0 +1,14 @@
+ <div class="col-xs-12 container-main only">
+    <div class="container-title">
+        <h1>Log In</h1>
+    </div>
+    <h3><span class="semi-bold">Username</span> & password</h3>
+	<form class="form-auth" ng-submit="login()">
+		<input type="username" ng-model="user.username" placeholder="firstname.lastname" class="form-control"><br>
+		<input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+		<input type="submit" value="Log in" class="menu-button blue" />
+		<p class="text-warning">{{error_message}}</p>
+	</form>
+</div>
+
+

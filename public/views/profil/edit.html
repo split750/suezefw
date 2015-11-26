@@ -1,0 +1,208 @@
+<div class="container-fluid"
+	id="direct_upload" 
+    >
+	<form class="col-xs-12">
+		<div class="row">
+			<div class="col-md-12 container-main">
+				<div class="container-title">
+					<h1>Edit your profil</h1>
+				</div>
+				<h3><span class="semi-bold">Personnal</span> information</h3>
+				<p>user id : {{profil.userId}}</p>
+				<div class="row">
+					<div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="firstName">First Name</label>
+				        	<input class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter your First name" ng-model="profil.firstname">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="lastName">Last Name</label>
+				        	<input class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter your Last name" ng-model="profil.lastname">
+				        </fieldset>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 container-main">
+				<div class="container-title">
+					<h1>Edit your photos</h1>
+				</div>
+				<h3><span class="semi-bold">Profil</span> pictures</h3>
+				<div class="row">
+					<div class="col-sm-6" ngf-drop="uploadFiles1($files)" ng-model="files" ng-multiple="false">
+						<fieldset class="form-group">
+				        	<label>Profil picture</label>
+				        	<div class="upload_button_holder">
+			                    <div href="#" class="btn btn-default" ngf-select="uploadFiles1($files)" title="upload1" resetOnClick="true" >Upload profil picture</div>
+			                </div>
+			            </fieldset>
+				    </div>
+				    <div class="col-sm-6 profil-pic">
+				    	<cl-image public-id="{{profil.profilPic}}" ng-show="showprofilPic"></cl-image>
+				    	<cl-image public-id="{{profilPic}}" ng-hide="showprofilPic"></cl-image>
+				    </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" ngf-drop="uploadFiles2($files)" ng-model="files" ng-multiple="false">
+						<fieldset class="form-group">
+				        	<label>Background picture</label>
+				        	<div class="upload_button_holder">
+			                    <div href="#" class="btn btn-default" ngf-select="uploadFiles2($files)" title="upload2" resetOnClick="true" >Upload background</div>
+			                </div>
+			            </fieldset>
+				    </div>
+				    <div class="col-sm-8 editBg">
+				    	<cl-image public-id="{{profil.bg}}" ng-show="showbg"></cl-image>
+				    	<cl-image public-id="{{bg}}" ng-hide="showbg"></cl-image>
+				    </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" ngf-drop="uploadFiles3($files)" ng-model="files" ng-multiple="false">
+						<fieldset class="form-group">
+				        	<label>Company picture</label>
+				        	<div class="upload_button_holder">
+			                    <div href="#" class="btn btn-default" ngf-select="uploadFiles3($files)" title="upload3" resetOnClick="true" >Upload company logo</div>
+			                </div>
+			            </fieldset>
+				    </div>
+				    <div class="col-sm-6 editBg">
+				    	<cl-image public-id="{{profil.companyLogo}}" ng-show="showcompanyLogo"></cl-image>
+				    	<cl-image public-id="{{companyLogo}}" ng-hide="showcompanyLogo"></cl-image>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 container-main">
+				<div class="container-title">
+					<h1>Edit your professionnal</h1>
+				</div>
+				<h3><span class="semi-bold">Job</span> information</h3>
+				
+				<div class="row">
+					<div class="col-sm-8">
+						<fieldset class="form-group">
+				        	<label for="company">Company name</label>
+				        	<input class="form-control" type="text" id="company" name="company" placeholder="Enter your company name" ng-model="profil.job.company">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<fieldset class="form-group">
+				        	<label for="title">Job tile</label>
+				        	<input class="form-control" type="text" id="title" name="title" placeholder="Enter your job title" ng-model="profil.job.title">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="attachment">Attachment / Direction</label>
+				        	<input class="form-control" type="text" id="attachment" name="attachment" placeholder="Enter your attachment" ng-model="profil.job.attachment">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-12">
+						<fieldset class="form-group">
+				        	<label for="summary">Summary</label>
+				        	<textarea class="form-control" id="summary" name="summary" placeholder="Enter your summary" ng-model="profil.job.userSummary"></textarea>
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="email">Email</label>
+				        	<input class="form-control" type="mail" id="email" name="email" placeholder="Enter your email" ng-model="profil.job.email">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="tel">Tel</label>
+				        	<input class="form-control" type="tel" id="tel" name="tel" placeholder="Enter your tel" ng-model="profil.job.tel">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="website">Website</label>
+				        	<input class="form-control" type="text" id="website" name="website" placeholder="Enter your website address" ng-model="profil.job.website">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<fieldset class="form-group">
+				        	<label for="label">Name of the place or building</label>
+				        	<input class="form-control" type="text" id="label" name="label" placeholder="Enter the name of the place or the building" ng-model="profil.job.label">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">   
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="address">Address</label>
+				        	<input class="form-control" type="text" id="address" name="address" placeholder="Enter your address" ng-model="profil.job.address">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="col-sm-4">
+						<fieldset class="form-group">
+				        	<label for="city">City</label>
+				        	<input class="form-control" type="text" id="city" name="city" placeholder="Enter the city name" ng-model="profil.job.city">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-4">
+						<fieldset class="form-group">
+				        	<label for="postalCode">Postal code</label>
+				        	<input class="form-control" type="text" id="postalCode" name="postalCode" placeholder="Enter the postalCode" ng-model="profil.job.postalCode">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-4">
+						<fieldset class="form-group">
+				        	<label for="countryRegion">Country</label>
+				        	<input class="form-control" type="text" id="countryRegion" name="countryRegion" placeholder="Enter the country/Region" ng-model="profil.job.countryRegion">
+				        </fieldset>
+				    </div>
+				</div>
+				<div class="row">    
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="assistant">Assistant</label>
+				        	<input class="form-control" type="text" id="assistant" name="assistant" placeholder="Enter the name of your assistant" ng-model="profil.job.assistant">
+				        </fieldset>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 container-main">
+				<div class="container-title">
+					<h1>Edit your social networks</h1>
+				</div>
+				<h3><span class="semi-bold">Social</span> contacts</h3>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="twitter">Twitter</label>
+				        	<input class="form-control" type="text" id="twitter" name="twitter" placeholder="Enter your Twitter username" ng-model="profil.socialNetwork.twitter">
+				        </fieldset>
+				    </div>
+				    <div class="col-sm-6">
+						<fieldset class="form-group">
+				        	<label for="linkedIn">LinkedIn</label>
+				        	<input class="form-control" type="text" id="linkedIn" name="linkedIn" placeholder="Enter your linkedIn link" ng-model="profil.socialNetwork.linkedIn">
+				        </fieldset>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+	      <div class="col-md-12 container-main text-center saveProfil">
+	        <input type="submit" value="{{isSubmitting ? 'saving profil...' : 'Save profil'}}" class="btn btn-primary" ng-click="saveProfil(profil)" ng-disabled="isSubmitting">
+	      </div>
+	    </div>
+    </form>
+</div>
