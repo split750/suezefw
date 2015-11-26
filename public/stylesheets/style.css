@@ -1,9 +1,8 @@
 body {
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     /*font-family: Arial,"Source Sans Pro","Helvetica Neue",sans-serif;*/
-    color: #626262;
-    background-color: rgb(240, 240, 240);
-    background-color: #dcddde;
+    color: #030F40;
+    background-color: #D5D6DE;
 }
 
 .body {
@@ -36,6 +35,42 @@ body {
 
 a {
 	color : rgb(26,144,219);
+}
+
+/*********************************************/
+/*                 Colors                    */
+/*********************************************/
+
+.green {
+    color: #AADC14;
+}
+
+.green-light {
+    color: #C4DE51;
+}
+
+.green-lighter {
+    color: #D2E28C;
+}
+
+.blue {
+    color: #030F40;
+}
+
+.blue-light {
+    color: #3D466C;
+}
+
+.blue-lighter {
+    color: #767C97;
+}
+
+.dark-grey {
+    color: #ABAFBF;
+}
+
+.grey {
+    color: #D5D6DE;
 }
 
 /*********************************************/
@@ -92,7 +127,7 @@ h1 {
 }
 
 .h1 {
-	color: rgb(47, 47, 47);
+	color: #030F40;
 	font-size: 110px;
 	font-stretch: normal;
 	font-style: normal;
@@ -121,7 +156,7 @@ h3 .semi-bold {
 .h4 {
 	font-size: 16px;
 	font-weight: 700;
-	color: #1a90db;
+	color: #AADC14;
 	margin: 0;
 	font-stretch: extra-expanded;
 }
@@ -179,7 +214,7 @@ h3 .semi-bold {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(26,144,219);
+    background-color: #3D466C;
     color: #fff;
     height: 60px;
     z-index: 1000;
@@ -197,6 +232,10 @@ h3 .semi-bold {
 
 .main-menu a:hover, .main-menu a:active, .main-menu a:focus {
     text-decoration: none;
+}
+
+.main-menu-logo {
+    width: 120px;
 }
 
 .main-menu .brand {
@@ -315,7 +354,7 @@ h3 .semi-bold {
     -ms-transition-duration: .14s;
     -o-transition-duration: .14s;
     transition-duration: .14s;
-    background-color: rgb(54,61,71);
+    background-color: #AADC14;
     color: #fff;
 }
 
@@ -335,8 +374,8 @@ h3 .semi-bold {
 }
 
 .menu-button.blue {
-    color: rgb(26,144,219);
-    border: 2px solid rgb(26,144,219);
+    color: #767C97;
+    border: 2px solid #767C97;
 }
 
 .menu-button.blue:hover {
@@ -345,7 +384,7 @@ h3 .semi-bold {
     -ms-transition-duration: .14s;
     -o-transition-duration: .14s;
     transition-duration: .14s;
-    background-color: rgb(26,144,219);
+    background-color: #767C97;
     color: #fff;
 }
 
@@ -488,11 +527,7 @@ h3 .semi-bold {
     margin-top: 0;
     height: 500px;
 	width: 100%;
-    background: url("../images/bg-intro.png") no-repeat;
-    background-size: 617px 416px;
-    background-position: center center;
-    background-color: #f1f1f1;
-    color: #2f2f2f;
+    color: #222;
 }
 
 #intro hgroup {
@@ -668,8 +703,7 @@ section.content {
 	position: relative;
 	margin-top: 540px;
 	padding: 20px 0;
-	background-color: rgb(240, 240, 240);
-	background-color: #dcddde;
+	background-color: #D5D6DE;
 }
 
 section .container.first {
@@ -682,7 +716,6 @@ section.content h1 {
 	font-size: 48px;
 	line-height: 56px;
 	text-transform: none;
-	color: #000;
 	letter-spacing: -1px;
 	height: auto;
 }
@@ -705,7 +738,7 @@ section.content p {
 .footer {
     position: relative;
     padding: 20px;
-    background-color: rgb(54,61,71);
+    background-color: #3D466C;
     text-align: center;
     color: #fff;
     border: 1px solid #000;
