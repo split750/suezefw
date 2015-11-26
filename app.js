@@ -14,7 +14,7 @@ var session = require('express-session');
 
 //  Mongoose connection //
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://ProLifeMonitor:BjkqNXvImzeAAxSPHAzNk35pm6X1yrWxpZHHwN05Iq0-@ds040898.mongolab.com:40898/ProLifeMonitor');  //connect to Mongo
+mongoose.connect('mongodb://heroku_tm8stqgm:ef6fk2rf801alb17cns86mfrho@ds055782.mongolab.com:55782/heroku_tm8stqgm');  //connect to Mongo
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));  
 var dbOpened = db.once('open', function() {
