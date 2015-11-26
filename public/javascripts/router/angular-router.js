@@ -15,21 +15,41 @@ app.config(function($routeProvider){
 			templateUrl: 'views/signup.html',
 			controller: 'authController'
 		})
-		.when('/:id', {
-			templateUrl: 'views/profil/index.html',
-			controller: 'profilController'
-		})
-		.when('/:id/edit', {
-			templateUrl: 'views/profil/edit.html',
-			controller: 'profilEditController'
-		})
-		.when('/:id/edit/profilpic', {
-			templateUrl: 'views/profil/editprofilpic.html',
-			controller: 'profilPicUploadController'
-		})
 		.when('/chrip', {
 			templateUrl: 'views/main.html',
 			controller: 'mainController'
+		})
+		.when('/team', {
+			templateUrl: 'views/team.html',
+			controller: 'siteController'
+		})
+		.when('/standardisation', {
+			templateUrl: 'views/standardisation.html',
+			controller: 'siteController'
+		})
+		.when('/oee', {
+			templateUrl: 'views/oee.html',
+			controller: 'siteController'
+		})
+		.when('/business-intelligence', {
+			templateUrl: 'views/business-intelligence.html',
+			controller: 'siteController'
+		})
+		.when('/project-improvement', {
+			templateUrl: 'views/project-improvement.html',
+			controller: 'siteController'
+		})
+		.when('/change-management', {
+			templateUrl: 'views/change-management.html',
+			controller: 'siteController'
+		})
+		.when('/suez-app', {
+			templateUrl: 'views/suez-app.html',
+			controller: 'siteController'
+		})
+		.when('/vision', {
+			templateUrl: 'views/vision.html',
+			controller: 'siteController'
 		})
 		.when('/photos', {
 	        templateUrl: 'partials/photo-list.html',
@@ -49,5 +69,17 @@ app.config(function($routeProvider){
 	    .when('/photos/new', {
 	        templateUrl: 'partials/photo-upload.html',
 	        controller: 'photoUploadCtrl'
-	    });
+	    })
+	    .when('/:id', {
+			templateUrl: 'views/profil/index.html',
+			controller: 'profilController'
+		})
+		.when('/:id/edit', {
+			templateUrl: 'views/profil/edit.html',
+			controller: 'profilEditController'
+		})
+		.when('/:id/edit/profilpic', {
+			templateUrl: 'views/profil/editprofilpic.html',
+			controller: 'profilPicUploadController'
+		});
 });

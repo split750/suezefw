@@ -389,6 +389,28 @@ h3 .semi-bold {
 }
 
 /*********************************************/
+/*                main page                  */
+/*********************************************/
+
+#main-page .intro {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0 280px 0;
+    text-align: center;
+}
+
+#oee .intro {
+    background-image: url("../images/oee-bg.jpg");
+    color: #FFF;
+}
+
+#main-page .intro h1 {
+    font-size: 72px;
+}
+
+
+/*********************************************/
 /*              profil page                  */
 /*********************************************/
 
@@ -698,9 +720,12 @@ h3 .semi-bold {
 
 section.content {
 	position: relative;
-	margin-top: 540px;
 	padding: 20px 0;
-	background-color: #D5D6DE;
+    background-color: #D5D6DE;
+}
+
+section.content.first {
+    margin-top: 540px;
 }
 
 section .container.first {

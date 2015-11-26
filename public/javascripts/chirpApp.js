@@ -2,6 +2,10 @@ var app = angular.module('chirpApp', ['ngRoute', 'ngResource','cloudinary', 'ngF
 	$rootScope.authenticated = false;
 	$rootScope.current_user = 'Guest';
 
+  $rootScope.$on('$stateChangeSuccess', function() {
+     document.body.scrollTop = document.documentElement.scrollTop = 0;
+  });
+  
 	$rootScope.signout = function(){
 		$http.get('auth/signout');
 		$rootScope.authenticated = false;
@@ -312,4 +316,8 @@ app.controller('profilEditController', ['$http','$scope', '$rootScope', '$routeP
 
 
 app.controller('homeController', function($scope, $rootScope, postService){
+});
+
+
+app.controller('siteController', function($scope){
 });
